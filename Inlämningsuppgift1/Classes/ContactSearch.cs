@@ -23,7 +23,7 @@ namespace AddressBook.Classes
                     {
                         var firstValue = propertyInfo.GetValue(contact, null).ToString();
 
-                        if (firstValue.ToLower() == (searchKey.ToLower()))
+                        if (firstValue.ToLower().Contains(searchKey.ToLower()))
                         {
                             searchResult.Add(contact.Name);
                             break;

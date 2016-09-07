@@ -19,11 +19,6 @@ namespace AddressBook
             ContactList.LoadContacts();
         }
 
-        private void picClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void lstContacts_SelectedIndexChanged(object sender, EventArgs e)
         {
             CurrentContact.ShowCurrent();
