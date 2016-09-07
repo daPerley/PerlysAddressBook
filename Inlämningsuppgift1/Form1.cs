@@ -21,7 +21,7 @@ namespace AddressBook
 
         private void lstContacts_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CurrentContact.ShowCurrent();
+            CurrentContact.ShowCurrent(lstContacts.SelectedIndex);
         }
 
         private void btnCSave_Click(object sender, EventArgs e) //Need to be fixed
@@ -45,6 +45,7 @@ namespace AddressBook
         private void btnSearch_Click(object sender, EventArgs e)
         {
             ContactSearch.SearchContacts();
+            ContactSearch.PopulateSearchResult();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -61,6 +62,12 @@ namespace AddressBook
             {
                 Form1.ActiveForm.AcceptButton = btnAdd;
             }
+        }
+
+        private void lstSearchResult_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CurrentContact.ShowCurrent(lstSearchResult.SelectedIndex);
+            lstSearchResult.Hide();//Fix so this row is triggered when the user clicks outside the listbox
         }
     }
 }

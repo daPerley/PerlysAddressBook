@@ -33,6 +33,20 @@ namespace AddressBook.Classes
             }
         }
 
-        //Fix so the searchresult get written out
+        public static void PopulateSearchResult()
+        {
+            foreach (var result in searchResult)
+            {
+                foreach (var contact in ContactList.contactList)
+                {
+                    if(result == contact.Name)
+                    {
+                        aBook.lstSearchResult.Items.Add(contact.Name);
+                    }
+                }
+            }
+
+            aBook.lstSearchResult.Show();
+        }
     }
 }

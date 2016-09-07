@@ -63,6 +63,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblAddCon = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lstSearchResult = new System.Windows.Forms.ListBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lstContacts = new System.Windows.Forms.ListBox();
@@ -448,6 +449,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
+            this.splitContainer1.Panel1.Controls.Add(this.lstSearchResult);
             this.splitContainer1.Panel1.Controls.Add(this.btnSearch);
             this.splitContainer1.Panel1.Controls.Add(this.txtSearch);
             this.splitContainer1.Panel1.Controls.Add(this.lstContacts);
@@ -460,6 +462,18 @@
             this.splitContainer1.Size = new System.Drawing.Size(634, 411);
             this.splitContainer1.SplitterDistance = 221;
             this.splitContainer1.TabIndex = 14;
+            // 
+            // lstSearchResult
+            // 
+            this.lstSearchResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstSearchResult.FormattingEnabled = true;
+            this.lstSearchResult.Location = new System.Drawing.Point(6, 53);
+            this.lstSearchResult.Name = "lstSearchResult";
+            this.lstSearchResult.Size = new System.Drawing.Size(139, 69);
+            this.lstSearchResult.TabIndex = 17;
+            this.lstSearchResult.Visible = false;
+            this.lstSearchResult.SelectedIndexChanged += new System.EventHandler(this.lstSearchResult_SelectedIndexChanged);
             // 
             // btnSearch
             // 
@@ -595,6 +609,7 @@
         public System.Windows.Forms.TextBox txtName;
         public System.Windows.Forms.TextBox txtStreet;
         public System.Windows.Forms.TextBox txtSearch;
+        public System.Windows.Forms.ListBox lstSearchResult;
     }
 }
 

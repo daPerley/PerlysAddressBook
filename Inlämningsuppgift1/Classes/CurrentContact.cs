@@ -8,16 +8,16 @@ namespace AddressBook.Classes
     {
         static Form1 aBook = Application.OpenForms.OfType<Form1>().FirstOrDefault();
 
-        public static void ShowCurrent()
+        public static void ShowCurrent(int contactIndex)
         {
             try
             {
-                aBook.txtCName.Text = ContactList.contactList[aBook.lstContacts.SelectedIndex].Name;
-                aBook.txtCEmail.Text = ContactList.contactList[aBook.lstContacts.SelectedIndex].Email;
-                aBook.txtCPhone.Text = ContactList.contactList[aBook.lstContacts.SelectedIndex].Phone;
-                aBook.txtCStreet.Text = ContactList.contactList[aBook.lstContacts.SelectedIndex].Street;
-                aBook.txtCZip.Text = ContactList.contactList[aBook.lstContacts.SelectedIndex].Zip;
-                aBook.txtCTown.Text = ContactList.contactList[aBook.lstContacts.SelectedIndex].Town;
+                aBook.txtCName.Text = ContactList.contactList[contactIndex].Name;
+                aBook.txtCEmail.Text = ContactList.contactList[contactIndex].Email;
+                aBook.txtCPhone.Text = ContactList.contactList[contactIndex].Phone;
+                aBook.txtCStreet.Text = ContactList.contactList[contactIndex].Street;
+                aBook.txtCZip.Text = ContactList.contactList[contactIndex].Zip;
+                aBook.txtCTown.Text = ContactList.contactList[contactIndex].Town;
             }
             catch (System.Exception)
             {
