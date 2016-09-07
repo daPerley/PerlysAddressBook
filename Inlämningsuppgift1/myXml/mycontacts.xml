@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Contacts>
+  <Contact>
+    <Name>Gose Björnen</Name>
+    <Email>Gose.Bjornen@gmail.com</Email>
+    <Phone>0735434204</Phone>
+    <Street>Nygatan 17b</Street>
+    <Zip>646 35</Zip>
+    <Town>Gnesta</Town>
+  </Contact>
+  <Contact>
+    <Name>Ginger Joe</Name>
+    <Email>gingerboi@gmail.com</Email>
+    <Phone>0736547824</Phone>
+    <Street>Nygatan 17b</Street>
+    <Zip>646 35</Zip>
+    <Town>Gnesta</Town>
+  </Contact>
+  <Contact>
+    <Name>Gummi Björn</Name>
+    <Email>gummi@gmail.com</Email>
+    <Phone>0000000000</Phone>
+    <Street>Blue STreet</Street>
+    <Zip>34534</Zip>
+    <Town>Blue World</Town>
+  </Contact>
+  <Contact>
+    <Name>Frans Krans</Name>
+    <Email>krans@gmail.com</Email>
+    <Phone>9999999999</Phone>
+    <Street>Kvastgatan 3F</Street>
+    <Zip>45398</Zip>
+    <Town>Kullerstensstad</Town>
+  </Contact>
+  <Contact>
+    <Name>Layla Icelandic</Name>
+    <Email>layla@gmail.com</Email>
+    <Phone>0704534499</Phone>
+    <Street>Gimstein 4B</Street>
+    <Zip>75648</Zip>
+    <Town>Gurktown</Town>
+  </Contact>
+  <Contact>
+    <Name>Smurfarnas Smurf</Name>
+    <Email>smurarna@smurf.com</Email>
+    <Phone>0764535488</Phone>
+    <Street>Smurfegatan 23E</Street>
+    <Zip>34588</Zip>
+    <Town>Smurfestan</Town>
+  </Contact>
+</Contacts>
