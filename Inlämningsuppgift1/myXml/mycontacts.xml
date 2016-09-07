@@ -48,4 +48,12 @@
     <Zip>34588</Zip>
     <Town>Smurfestan</Town>
   </Contact>
+  <Contact>
+    <Name>Gnesta</Name>
+    <Email>er@hdr.asd</Email>
+    <Phone>4356789</Phone>
+    <Street>asdf</Street>
+    <Zip>245647</Zip>
+    <Town>Gnesta</Town>
+  </Contact>
 </Contacts>

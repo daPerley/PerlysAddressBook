@@ -26,6 +26,7 @@ namespace AddressBook.Classes
                         if (firstValue.ToLower() == (searchKey.ToLower()))
                         {
                             searchResult.Add(contact.Name);
+                            break;
                         }
                     }
                 }

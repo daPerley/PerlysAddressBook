@@ -26,7 +26,7 @@ namespace AddressBook.Classes
 
         }
 
-        public static void SaveChanges()
+        public static void SaveChanges() // Make this work
         {
             var myContacts = XDocument.Load(Constants.pathToXml);
 
