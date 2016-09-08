@@ -9,7 +9,7 @@ namespace AddressBook.Classes
     class ContactSearch
     {
         static Form1 aBook = Application.OpenForms.OfType<Form1>().FirstOrDefault();
-        public static List<string> searchResult = new List<String>();
+        //public static List<string> searchResult = new List<String>();
 
         public static void SearchContacts()
         {
@@ -25,28 +25,13 @@ namespace AddressBook.Classes
 
                         if (firstValue.ToLower().Contains(searchKey.ToLower()))
                         {
-                            searchResult.Add(contact.Name);
+                            aBook.lstSearchResult.Items.Add(contact.Name);
+                            aBook.lstSearchResult.Show();
                             break;
                         }
                     }
                 }
             }
-        }
-
-        public static void PopulateSearchResult()
-        {
-            foreach (var result in searchResult)
-            {
-                foreach (var contact in ContactList.contactList)
-                {
-                    if(result == contact.Name)
-                    {
-                        aBook.lstSearchResult.Items.Add(contact.Name);
-                    }
-                }
-            }
-
-            aBook.lstSearchResult.Show();
         }
     }
 }

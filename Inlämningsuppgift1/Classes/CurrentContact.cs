@@ -30,7 +30,7 @@ namespace AddressBook.Classes
         {
             var myContacts = XDocument.Load(Constants.pathToXml);
 
-            var changedContact = myContacts.Descendants("Contact").Where(aa => aa.Element("Name").Value == aBook.txtCName.Text);
+            var changedContact = (XElement)(myContacts.Descendants("Contact").Where(aa => aa.Element("Name").Value == aBook.txtCName.Text));
 
             myContacts.Element("Name").Value = aBook.txtCName.Text;
             myContacts.Element("Email").Value = aBook.txtCEmail.Text;
