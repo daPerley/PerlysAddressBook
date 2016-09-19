@@ -11,7 +11,7 @@ namespace AddressBook.Classes
 
         public static bool EmailCheck(string email)
         {
-            if (email.Contains("@") && (email[email.Length - 4] == '.' || email[email.Length - 3] == '.') && (email.Count(x => x == '@')) == 1)
+            if ((email.Count(x => x == '@')) == 1 && (email[email.Length - 4] == '.' || email[email.Length - 3] == '.') /*&& Regex.IsMatch(email, @"!^[\s ]+$")*/)
             {
                 return true;
             }
@@ -37,7 +37,7 @@ namespace AddressBook.Classes
 
         public static bool ZipCeck(string zip)
         {
-            if (Regex.IsMatch(zip, "^[0-9 ]+$"))
+            if (Regex.IsMatch(zip, "^[0-9 ]+$") && (zip.Length <= 5))
             {
                 return true;
             }

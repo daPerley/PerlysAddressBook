@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Classes\AddContact.cs" />
     <Compile Include="Classes\Constants.cs" />
+    <Compile Include="Classes\Contact.cs" />
     <Compile Include="Classes\ContactList.cs" />
     <Compile Include="Classes\ContactSearch.cs" />
     <Compile Include="Classes\CurrentContact.cs" />

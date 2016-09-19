@@ -11,21 +11,6 @@ namespace AddressBook.Classes
 
         public static List<Contact> contactList = new List<Contact>();
 
-        public class Contact
-        {
-            public string Name { get; set; }
-
-            public string Email { get; set; }
-
-            public string Phone { get; set; }
-
-            public string Street { get; set; }
-
-            public string Zip { get; set; }
-
-            public string Town { get; set; }
-        }
-
         public static void LoadContacts()
         {
             contactList.Clear();
@@ -34,7 +19,7 @@ namespace AddressBook.Classes
 
             foreach (var cInfo in myContacts.Descendants("Contact"))
             {
-                var contact = new ContactList.Contact();
+                var contact = new Contact();
 
                 contact.Name = cInfo.Element("Name").Value;
                 contact.Email = cInfo.Element("Email").Value;

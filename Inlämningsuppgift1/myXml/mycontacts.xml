@@ -49,11 +49,27 @@
     <Town>Smurfestan</Town>
   </Contact>
   <Contact>
-    <Name>Gnesta Test</Name>
+    <Name>Gnesta Testtva</Name>
     <Email>er@hdr.asd</Email>
     <Phone>4356789</Phone>
     <Street>asdf</Street>
     <Zip>245647</Zip>
     <Town>Gnesta</Town>
+  </Contact>
+  <Contact>
+    <Name>Gurkans Återkomst</Name>
+    <Email>dfg@tre.tva</Email>
+    <Phone>4563453423</Phone>
+    <Street>jhfd</Street>
+    <Zip>76543</Zip>
+    <Town>hfgjhu</Town>
+  </Contact>
+  <Contact>
+    <Name>Gnesta Test</Name>
+    <Email>ghjkl@lkjn.fg</Email>
+    <Phone>34567890</Phone>
+    <Street>dfghjk</Street>
+    <Zip>45678</Zip>
+    <Town>dfghjkl</Town>
   </Contact>
 </Contacts>

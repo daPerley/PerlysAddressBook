@@ -7,6 +7,8 @@ namespace AddressBook.Classes
     class CurrentContact
     {
         static Form1 aBook = Application.OpenForms.OfType<Form1>().FirstOrDefault();
+        static string currentName;
+        static string currentEmail;
 
         public static void ShowCurrent(int contactIndex)
         {
@@ -18,27 +20,57 @@ namespace AddressBook.Classes
                 aBook.txtCStreet.Text = ContactList.contactList[contactIndex].Street;
                 aBook.txtCZip.Text = ContactList.contactList[contactIndex].Zip;
                 aBook.txtCTown.Text = ContactList.contactList[contactIndex].Town;
+
+                currentName = ContactList.contactList[contactIndex].Name;
+                currentEmail = ContactList.contactList[contactIndex].Email;
             }
             catch (System.Exception)
             {
-                
+                //todo logga exceptions
             }
 
         }
 
-        public static void SaveChanges() // Make this work
+        public static void ShowSearched(int contactIndex)
+        {
+            try
+            {
+                aBook.txtCName.Text = ContactSearch.searchList[contactIndex].Name;
+                aBook.txtCEmail.Text = ContactSearch.searchList[contactIndex].Email;
+                aBook.txtCPhone.Text = ContactSearch.searchList[contactIndex].Phone;
+                aBook.txtCStreet.Text = ContactSearch.searchList[contactIndex].Street;
+                aBook.txtCZip.Text = ContactSearch.searchList[contactIndex].Zip;
+                aBook.txtCTown.Text = ContactSearch.searchList[contactIndex].Town;
+
+                currentName = ContactSearch.searchList[contactIndex].Name;
+                currentEmail = ContactSearch.searchList[contactIndex].Email;
+            }
+            catch (System.Exception)
+            {
+
+            }
+
+        }
+
+        public static void SaveChanges()
         {
             var myContacts = XDocument.Load(Constants.pathToXml);
 
-            var changedContact = (XElement)(myContacts.Descendants("Contact").Where(aa => aa.Element("Name").Value == aBook.txtCName.Text));
+            var changedContact = (from contact in myContacts.Root.Elements("Contact")
+                                  where contact.Element("Name").Value == currentName && contact.Element("Email").Value == currentEmail
+                                  select contact).Single();
 
-            myContacts.Element("Name").Value = aBook.txtCName.Text;
-            myContacts.Element("Email").Value = aBook.txtCEmail.Text;
-            myContacts.Element("Phone").Value = aBook.txtCPhone.Text;
-            myContacts.Element("Street").Value = aBook.txtCStreet.Text;
-            myContacts.Element("Zip").Value = aBook.txtCZip.Text;
-            myContacts.Element("Town").Value = aBook.txtCTown.Text;
+            changedContact.Element("Name").Value = aBook.txtCName.Text;
+            changedContact.Element("Email").Value = aBook.txtCEmail.Text;
+            changedContact.Element("Phone").Value = aBook.txtCPhone.Text;
+            changedContact.Element("Street").Value = aBook.txtCStreet.Text;
+            changedContact.Element("Zip").Value = aBook.txtCZip.Text;
+            changedContact.Element("Town").Value = aBook.txtCTown.Text;
+
             myContacts.Save(Constants.pathToXml);
+
+            currentName = aBook.txtCName.Text;
+            currentEmail = aBook.txtCEmail.Text;
         }
 
         public static void DeleteContact()
