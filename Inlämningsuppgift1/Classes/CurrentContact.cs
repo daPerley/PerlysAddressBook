@@ -26,7 +26,8 @@ namespace AddressBook.Classes
             }
             catch (System.Exception)
             {
-                //todo logga exceptions
+                //todo logga exceptions, singelton that writes to an txt file
+                var loggPath = @"SolutionItems/Logg.txt";
             }
 
         }

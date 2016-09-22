@@ -1,6 +1,7 @@
 ﻿using AddressBook.Classes;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -16,7 +17,18 @@ namespace AddressBook
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ContactList.LoadContacts();
+            if (File.Exists(Constants.pathToXml))
+            {
+                ContactList.LoadContacts();
+            }
+            else
+            {
+                //Create the xml doc
+                XDocument myContacts = new XDocument(
+                        new XElement("Contacts"));
+
+                myContacts.Save(Constants.pathToXml);
+            }
         }
 
         private void lstContacts_SelectedIndexChanged(object sender, EventArgs e)

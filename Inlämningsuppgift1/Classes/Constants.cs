@@ -8,6 +8,6 @@ namespace AddressBook.Classes
 {
     public class Constants
     {
-        public const string pathToXml = @"E:\Nackademin\C#\Inlämningsuppgift1\PerlysAddressBook\Inlämningsuppgift1\myXml\mycontacts.xml";
+        public const string pathToXml = @"D:\Nackademin\C#\Inlämningsuppgift1\PerlysAddressBook\Inlämningsuppgift1\myXml\mycontacts.xml";
     }
 }
