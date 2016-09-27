@@ -1,17 +1,29 @@
-﻿using AddressBook;
-using System.Linq;
+﻿using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace AddressBook.Classes
+namespace AddressBook.Abstractions
 {
     class Validation
     {
         static Form1 aBook = Application.OpenForms.OfType<Form1>().FirstOrDefault();
 
+        public static bool NameCheck(string name)
+        {
+            if ((name.Count(y => y == ' ')) >= 1)
+            {
+                return true;
+            }
+            else
+            {
+                aBook.errorProviderName.SetError(aBook.txtEmail, "The name entered isn't valid! Please enter a full name (no numbers)");
+                return false;
+            }
+        }
+
         public static bool EmailCheck(string email)
         {
-            if ((email.Count(x => x == '@')) == 1 && (email[email.Length - 4] == '.' || email[email.Length - 3] == '.') /*&& Regex.IsMatch(email, @"!^[\s ]+$")*/)
+            if ((email.Count(x => x == '@')) == 1 && (email[email.Length - 4] == '.' || email[email.Length - 3] == '.') && (email.Count(y => y == ' ')) == 0)
             {
                 return true;
             }

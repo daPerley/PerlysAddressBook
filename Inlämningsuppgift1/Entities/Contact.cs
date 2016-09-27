@@ -1,4 +1,4 @@
-﻿namespace AddressBook.Classes
+﻿namespace AddressBook.Entities
 {
     public class Contact
     {

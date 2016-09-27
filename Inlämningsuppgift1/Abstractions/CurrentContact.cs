@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace AddressBook.Classes
+namespace AddressBook.Abstractions
 {
     class CurrentContact
     {
@@ -27,7 +27,7 @@ namespace AddressBook.Classes
             catch (System.Exception)
             {
                 //todo logga exceptions, singelton that writes to an txt file
-                var loggPath = @"SolutionItems/Logg.txt";
+                var loggPath = @"ExceptionLogg/Logg.txt";
             }
 
         }

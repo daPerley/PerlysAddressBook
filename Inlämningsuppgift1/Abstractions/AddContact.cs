@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace AddressBook.Classes
+namespace AddressBook.Abstractions
 {
     class AddContact
     {
@@ -10,11 +10,12 @@ namespace AddressBook.Classes
 
         public static void ValidateContact()
         {
+            bool isNameOk = Validation.NameCheck(aBook.txtName.Text);
             bool isEmailOk = Validation.EmailCheck(aBook.txtEmail.Text);
             bool isPhoneOk = Validation.PhoneCheck(aBook.txtPhone.Text);
             bool isZipOk = Validation.ZipCeck(aBook.txtZip.Text);
 
-            if (isEmailOk && isPhoneOk && isZipOk)
+            if (isEmailOk && isPhoneOk && isZipOk && isNameOk)
             {
                 ClearErrors();
                 Add();
@@ -25,6 +26,7 @@ namespace AddressBook.Classes
 
         public static void ClearErrors()
         {
+            aBook.errorProviderName.Clear();
             aBook.errorProviderEmail.Clear();
             aBook.errorProviderPhone.Clear();
             aBook.errorProviderZip.Clear();

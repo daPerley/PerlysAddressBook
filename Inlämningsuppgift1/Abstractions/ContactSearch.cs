@@ -1,10 +1,11 @@
-﻿using System;
+﻿using AddressBook.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace AddressBook.Classes
+namespace AddressBook.Abstractions
 {
     class ContactSearch
     {

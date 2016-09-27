@@ -71,6 +71,7 @@
             this.errorProviderEmail = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderPhone = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderZip = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderName = new System.Windows.Forms.ErrorProvider(this.components);
             this.panAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -79,6 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderZip)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderName)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMail
@@ -87,7 +89,7 @@
             this.lblMail.AutoSize = true;
             this.lblMail.Location = new System.Drawing.Point(12, 433);
             this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(104, 32);
+            this.lblMail.Size = new System.Drawing.Size(38, 13);
             this.lblMail.TabIndex = 1;
             this.lblMail.Text = "E-mail:";
             // 
@@ -97,7 +99,7 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Location = new System.Drawing.Point(12, 456);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(106, 32);
+            this.lblPhone.Size = new System.Drawing.Size(41, 13);
             this.lblPhone.TabIndex = 2;
             this.lblPhone.Text = "Phone:";
             // 
@@ -107,7 +109,7 @@
             this.lblStreet.AutoSize = true;
             this.lblStreet.Location = new System.Drawing.Point(12, 455);
             this.lblStreet.Name = "lblStreet";
-            this.lblStreet.Size = new System.Drawing.Size(99, 32);
+            this.lblStreet.Size = new System.Drawing.Size(38, 13);
             this.lblStreet.TabIndex = 3;
             this.lblStreet.Text = "Street:";
             // 
@@ -117,7 +119,7 @@
             this.lblZip.AutoSize = true;
             this.lblZip.Location = new System.Drawing.Point(12, 501);
             this.lblZip.Name = "lblZip";
-            this.lblZip.Size = new System.Drawing.Size(63, 32);
+            this.lblZip.Size = new System.Drawing.Size(25, 13);
             this.lblZip.TabIndex = 4;
             this.lblZip.Text = "Zip:";
             // 
@@ -127,7 +129,7 @@
             this.lblTown.AutoSize = true;
             this.lblTown.Location = new System.Drawing.Point(12, 525);
             this.lblTown.Name = "lblTown";
-            this.lblTown.Size = new System.Drawing.Size(92, 32);
+            this.lblTown.Size = new System.Drawing.Size(37, 13);
             this.lblTown.TabIndex = 5;
             this.lblTown.Text = "Town:";
             // 
@@ -137,7 +139,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.Location = new System.Drawing.Point(57, 430);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(439, 38);
+            this.txtEmail.Size = new System.Drawing.Size(439, 20);
             this.txtEmail.TabIndex = 7;
             this.txtEmail.TextChanged += new System.EventHandler(this.AddContactEnter_TextChanged);
             // 
@@ -147,7 +149,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPhone.Location = new System.Drawing.Point(57, 453);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(439, 38);
+            this.txtPhone.Size = new System.Drawing.Size(439, 20);
             this.txtPhone.TabIndex = 8;
             this.txtPhone.TextChanged += new System.EventHandler(this.AddContactEnter_TextChanged);
             // 
@@ -157,7 +159,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtStreet.Location = new System.Drawing.Point(57, 476);
             this.txtStreet.Name = "txtStreet";
-            this.txtStreet.Size = new System.Drawing.Size(439, 38);
+            this.txtStreet.Size = new System.Drawing.Size(439, 20);
             this.txtStreet.TabIndex = 9;
             this.txtStreet.TextChanged += new System.EventHandler(this.AddContactEnter_TextChanged);
             // 
@@ -167,7 +169,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtZip.Location = new System.Drawing.Point(57, 499);
             this.txtZip.Name = "txtZip";
-            this.txtZip.Size = new System.Drawing.Size(439, 38);
+            this.txtZip.Size = new System.Drawing.Size(439, 20);
             this.txtZip.TabIndex = 10;
             this.txtZip.TextChanged += new System.EventHandler(this.AddContactEnter_TextChanged);
             // 
@@ -177,7 +179,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTown.Location = new System.Drawing.Point(57, 522);
             this.txtTown.Name = "txtTown";
-            this.txtTown.Size = new System.Drawing.Size(439, 38);
+            this.txtTown.Size = new System.Drawing.Size(439, 20);
             this.txtTown.TabIndex = 11;
             this.txtTown.TextChanged += new System.EventHandler(this.AddContactEnter_TextChanged);
             // 
@@ -240,7 +242,7 @@
             this.lblNStreet.AutoSize = true;
             this.lblNStreet.Location = new System.Drawing.Point(11, 479);
             this.lblNStreet.Name = "lblNStreet";
-            this.lblNStreet.Size = new System.Drawing.Size(99, 32);
+            this.lblNStreet.Size = new System.Drawing.Size(38, 13);
             this.lblNStreet.TabIndex = 39;
             this.lblNStreet.Text = "Street:";
             // 
@@ -250,7 +252,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(12, 410);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(98, 32);
+            this.lblName.Size = new System.Drawing.Size(38, 13);
             this.lblName.TabIndex = 37;
             this.lblName.Text = "Name:";
             // 
@@ -260,7 +262,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtName.Location = new System.Drawing.Point(57, 407);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(439, 38);
+            this.txtName.Size = new System.Drawing.Size(439, 20);
             this.txtName.TabIndex = 38;
             this.txtName.TextChanged += new System.EventHandler(this.AddContactEnter_TextChanged);
             // 
@@ -311,7 +313,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCStreet.Location = new System.Drawing.Point(57, 99);
             this.txtCStreet.Name = "txtCStreet";
-            this.txtCStreet.Size = new System.Drawing.Size(439, 38);
+            this.txtCStreet.Size = new System.Drawing.Size(439, 20);
             this.txtCStreet.TabIndex = 27;
             // 
             // lblCName
@@ -319,7 +321,7 @@
             this.lblCName.AutoSize = true;
             this.lblCName.Location = new System.Drawing.Point(13, 33);
             this.lblCName.Name = "lblCName";
-            this.lblCName.Size = new System.Drawing.Size(98, 32);
+            this.lblCName.Size = new System.Drawing.Size(38, 13);
             this.lblCName.TabIndex = 18;
             this.lblCName.Text = "Name:";
             // 
@@ -329,7 +331,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCTown.Location = new System.Drawing.Point(57, 145);
             this.txtCTown.Name = "txtCTown";
-            this.txtCTown.Size = new System.Drawing.Size(439, 38);
+            this.txtCTown.Size = new System.Drawing.Size(439, 20);
             this.txtCTown.TabIndex = 29;
             // 
             // lblCEmail
@@ -337,7 +339,7 @@
             this.lblCEmail.AutoSize = true;
             this.lblCEmail.Location = new System.Drawing.Point(13, 56);
             this.lblCEmail.Name = "lblCEmail";
-            this.lblCEmail.Size = new System.Drawing.Size(104, 32);
+            this.lblCEmail.Size = new System.Drawing.Size(38, 13);
             this.lblCEmail.TabIndex = 19;
             this.lblCEmail.Text = "E-mail:";
             // 
@@ -347,7 +349,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCZip.Location = new System.Drawing.Point(57, 122);
             this.txtCZip.Name = "txtCZip";
-            this.txtCZip.Size = new System.Drawing.Size(439, 38);
+            this.txtCZip.Size = new System.Drawing.Size(439, 20);
             this.txtCZip.TabIndex = 28;
             // 
             // lblCPhone
@@ -355,7 +357,7 @@
             this.lblCPhone.AutoSize = true;
             this.lblCPhone.Location = new System.Drawing.Point(13, 79);
             this.lblCPhone.Name = "lblCPhone";
-            this.lblCPhone.Size = new System.Drawing.Size(106, 32);
+            this.lblCPhone.Size = new System.Drawing.Size(41, 13);
             this.lblCPhone.TabIndex = 20;
             this.lblCPhone.Text = "Phone:";
             // 
@@ -364,7 +366,7 @@
             this.lblCStreet.AutoSize = true;
             this.lblCStreet.Location = new System.Drawing.Point(13, 102);
             this.lblCStreet.Name = "lblCStreet";
-            this.lblCStreet.Size = new System.Drawing.Size(99, 32);
+            this.lblCStreet.Size = new System.Drawing.Size(38, 13);
             this.lblCStreet.TabIndex = 21;
             this.lblCStreet.Text = "Street:";
             // 
@@ -374,7 +376,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCPhone.Location = new System.Drawing.Point(57, 76);
             this.txtCPhone.Name = "txtCPhone";
-            this.txtCPhone.Size = new System.Drawing.Size(439, 38);
+            this.txtCPhone.Size = new System.Drawing.Size(439, 20);
             this.txtCPhone.TabIndex = 26;
             // 
             // lblCZip
@@ -382,7 +384,7 @@
             this.lblCZip.AutoSize = true;
             this.lblCZip.Location = new System.Drawing.Point(13, 125);
             this.lblCZip.Name = "lblCZip";
-            this.lblCZip.Size = new System.Drawing.Size(63, 32);
+            this.lblCZip.Size = new System.Drawing.Size(25, 13);
             this.lblCZip.TabIndex = 22;
             this.lblCZip.Text = "Zip:";
             // 
@@ -392,7 +394,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCEmail.Location = new System.Drawing.Point(57, 53);
             this.txtCEmail.Name = "txtCEmail";
-            this.txtCEmail.Size = new System.Drawing.Size(439, 38);
+            this.txtCEmail.Size = new System.Drawing.Size(439, 20);
             this.txtCEmail.TabIndex = 25;
             // 
             // lblCText
@@ -400,7 +402,7 @@
             this.lblCText.AutoSize = true;
             this.lblCText.Location = new System.Drawing.Point(13, 148);
             this.lblCText.Name = "lblCText";
-            this.lblCText.Size = new System.Drawing.Size(92, 32);
+            this.lblCText.Size = new System.Drawing.Size(37, 13);
             this.lblCText.TabIndex = 23;
             this.lblCText.Text = "Town:";
             // 
@@ -410,7 +412,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCName.Location = new System.Drawing.Point(57, 30);
             this.txtCName.Name = "txtCName";
-            this.txtCName.Size = new System.Drawing.Size(439, 38);
+            this.txtCName.Size = new System.Drawing.Size(439, 20);
             this.txtCName.TabIndex = 24;
             // 
             // btnAdd
@@ -473,7 +475,7 @@
             this.lstSearchResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstSearchResult.ForeColor = System.Drawing.Color.DimGray;
             this.lstSearchResult.FormattingEnabled = true;
-            this.lstSearchResult.ItemHeight = 46;
+            this.lstSearchResult.ItemHeight = 20;
             this.lstSearchResult.Location = new System.Drawing.Point(8, 65);
             this.lstSearchResult.Name = "lstSearchResult";
             this.lstSearchResult.Size = new System.Drawing.Size(259, 460);
@@ -503,7 +505,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(6, 31);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(193, 44);
+            this.txtSearch.Size = new System.Drawing.Size(193, 22);
             this.txtSearch.TabIndex = 2;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -517,7 +519,7 @@
             this.lstContacts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstContacts.ForeColor = System.Drawing.Color.DimGray;
             this.lstContacts.FormattingEnabled = true;
-            this.lstContacts.ItemHeight = 46;
+            this.lstContacts.ItemHeight = 20;
             this.lstContacts.Location = new System.Drawing.Point(8, 65);
             this.lstContacts.Name = "lstContacts";
             this.lstContacts.Size = new System.Drawing.Size(259, 460);
@@ -551,6 +553,10 @@
             this.errorProviderZip.ContainerControl = this;
             this.errorProviderZip.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderZip.Icon")));
             // 
+            // errorProviderName
+            // 
+            this.errorProviderName.ContainerControl = this;
+            // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.Black;
@@ -573,6 +579,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderZip)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderName)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -619,6 +626,7 @@
         public System.Windows.Forms.TextBox txtStreet;
         public System.Windows.Forms.TextBox txtSearch;
         public System.Windows.Forms.ListBox lstSearchResult;
+        public System.Windows.Forms.ErrorProvider errorProviderName;
     }
 }
 

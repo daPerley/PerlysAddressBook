@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using AddressBook.Entities;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace AddressBook.Classes
+namespace AddressBook.Abstractions
 {
     class ContactList
     {
