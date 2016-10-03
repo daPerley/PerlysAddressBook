@@ -1,10 +1,11 @@
 ﻿using AddressBook.Entities;
+using AddressBook.Configures;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace AddressBook.Abstractions
+namespace AddressBook.HandleContacts
 {
     class ContactList
     {

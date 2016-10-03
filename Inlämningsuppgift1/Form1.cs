@@ -1,4 +1,5 @@
-﻿using AddressBook.Abstractions;
+﻿using AddressBook.Configures;
+using AddressBook.HandleContacts;
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -21,7 +22,6 @@ namespace AddressBook
             }
             else
             {
-                //Create the xml doc
                 XDocument myContacts = new XDocument(
                         new XElement("Contacts"));
 
@@ -34,7 +34,7 @@ namespace AddressBook
             CurrentContact.ShowCurrent(lstContacts.SelectedIndex);
         }
 
-        private void btnCSave_Click(object sender, EventArgs e) //Need to be fixed
+        private void btnCSave_Click(object sender, EventArgs e)
         {
             CurrentContact.SaveChanges();
             ContactList.UpdateContactList();
@@ -60,17 +60,17 @@ namespace AddressBook
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            if (Form1.ActiveForm.AcceptButton != btnSearch)
+            if (ActiveForm.AcceptButton != btnSearch)
             {
-                Form1.ActiveForm.AcceptButton = btnSearch;
+                ActiveForm.AcceptButton = btnSearch;
             }
         }
 
         private void AddContactEnter_TextChanged(object sender, EventArgs e)
         {
-            if (Form1.ActiveForm.AcceptButton != btnAdd)
+            if (ActiveForm.AcceptButton != btnAdd)
             {
-                Form1.ActiveForm.AcceptButton = btnAdd;
+                ActiveForm.AcceptButton = btnAdd;
             }
         }
 

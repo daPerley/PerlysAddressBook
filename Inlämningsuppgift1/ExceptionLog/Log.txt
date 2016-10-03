@@ -1,0 +1,15 @@
+29/09/2016 9:44:03 AMSystem.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at AddressBook.HandleContacts.CurrentContact.ShowCurrent(Int32 contactIndex) in D:\Nackademin\C#\Inlämningsuppgift1\PerlysAddressBook\Inlämningsuppgift1\HandleContacts\CurrentContact.cs:line 20
+29/09/2016 9:47:37 AMSystem.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at AddressBook.HandleContacts.CurrentContact.ShowCurrent(Int32 contactIndex) in D:\Nackademin\C#\Inlämningsuppgift1\PerlysAddressBook\Inlämningsuppgift1\HandleContacts\CurrentContact.cs:line 20
+29/09/2016 9:47:38 AMSystem.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at AddressBook.HandleContacts.CurrentContact.ShowCurrent(Int32 contactIndex) in D:\Nackademin\C#\Inlämningsuppgift1\PerlysAddressBook\Inlämningsuppgift1\HandleContacts\CurrentContact.cs:line 20

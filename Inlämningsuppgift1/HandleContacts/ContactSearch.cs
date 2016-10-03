@@ -1,11 +1,10 @@
 ﻿using AddressBook.Entities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace AddressBook.Abstractions
+namespace AddressBook.HandleContacts
 {
     class ContactSearch
     {
@@ -48,7 +47,7 @@ namespace AddressBook.Abstractions
             aBook.lstSearchResult.Show();
         }
 
-        public static void MatchFound(AddressBook.Classes.Contact contact)
+        public static void MatchFound(Contact contact)
         {
             var searchContact = new Contact();
 

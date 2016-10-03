@@ -1,10 +1,12 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using System.Net.Mail;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace AddressBook.Abstractions
+namespace AddressBook.Validation
 {
-    class Validation
+    class Validations
     {
         static Form1 aBook = Application.OpenForms.OfType<Form1>().FirstOrDefault();
 
@@ -16,18 +18,20 @@ namespace AddressBook.Abstractions
             }
             else
             {
-                aBook.errorProviderName.SetError(aBook.txtEmail, "The name entered isn't valid! Please enter a full name (no numbers)");
+                aBook.errorProviderName.SetError(aBook.txtName, "The name entered isn't valid! Please enter a full name (no numbers)");
                 return false;
             }
         }
 
         public static bool EmailCheck(string email)
         {
-            if ((email.Count(x => x == '@')) == 1 && (email[email.Length - 4] == '.' || email[email.Length - 3] == '.') && (email.Count(y => y == ' ')) == 0)
+            try
             {
+                email.Trim();
+                var validEmail = new MailAddress(email);
                 return true;
             }
-            else
+            catch (Exception)
             {
                 aBook.errorProviderEmail.SetError(aBook.txtEmail, "The email entered isn't valid!");
                 return false;

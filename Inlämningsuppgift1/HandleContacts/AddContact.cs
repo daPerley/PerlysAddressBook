@@ -1,8 +1,10 @@
 ﻿using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using AddressBook.Configures;
+using AddressBook.Validation;
 
-namespace AddressBook.Abstractions
+namespace AddressBook.HandleContacts
 {
     class AddContact
     {
@@ -10,10 +12,10 @@ namespace AddressBook.Abstractions
 
         public static void ValidateContact()
         {
-            bool isNameOk = Validation.NameCheck(aBook.txtName.Text);
-            bool isEmailOk = Validation.EmailCheck(aBook.txtEmail.Text);
-            bool isPhoneOk = Validation.PhoneCheck(aBook.txtPhone.Text);
-            bool isZipOk = Validation.ZipCeck(aBook.txtZip.Text);
+            bool isNameOk = Validations.NameCheck(aBook.txtName.Text);
+            bool isEmailOk = Validations.EmailCheck(aBook.txtEmail.Text);
+            bool isPhoneOk = Validations.PhoneCheck(aBook.txtPhone.Text);
+            bool isZipOk = Validations.ZipCeck(aBook.txtZip.Text);
 
             if (isEmailOk && isPhoneOk && isZipOk && isNameOk)
             {

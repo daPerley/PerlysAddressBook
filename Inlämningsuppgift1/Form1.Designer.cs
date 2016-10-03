@@ -556,6 +556,7 @@
             // errorProviderName
             // 
             this.errorProviderName.ContainerControl = this;
+            this.errorProviderName.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderName.Icon")));
             // 
             // Form1
             // 
